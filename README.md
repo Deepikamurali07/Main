@@ -26,7 +26,7 @@ This repository was created to showcase my analytical and technical skills (Exce
 * [Contacts](#contacts)
 ## Portfolio Projects
 This section contains a list of projects with brief descriptions.
-### E-Commerce Sales Analysis
+### ECommerce-Sales-Analysis
 **Description:** The main goal of this project is to analyze a dataset scraped from  containing data in 46405 rows about cars on sale in Germany with production years from 2011 to 2021 using different Python libraries. Find out some interesting information and insights, visualize them, and present them using MS PowerPoint.<br>
 **Code:**<a href = "">
   <code>german-cars-data-analysis.ipynb</code></a><br>
