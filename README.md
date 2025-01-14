@@ -1,4 +1,4 @@
-# Deepika Murali - Data Analysis portfolio
+# Deepika Murali
 ## About me
 Hello everyone! My name is Deepika, and this is my portfolio.<br>
 I love investigating different types of data, discovering insights, and representing it with beautiful visuals.<br>
