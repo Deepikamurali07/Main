@@ -26,7 +26,7 @@ This section contains a list of projects with brief descriptions.
 **Code:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/SQL/Employee%20Data%20Analysis/SQLQuery_Emp.sql">
   <code>Employee SQL Query File</code></a><br>
 **Dataset** <a href = "https://github.com/Deepikamurali07/Main/blob/main/SQL/Employee%20Data%20Analysis/Employe_Performance_dataset.csv">
- <dataset>Employe_Performance_dataset.csv</dataset></a><br>
+ <code>Employe_Performance_dataset.csv</code></a><br>
 **Skills:** Data Cleaning, Data Analysis, SQL, Data Transformation, Performance Analysis, Employee Segmentation, Correlation Analysis, HR Analytics, Data Visualization, Strategic Decision Making.<br>
 **Results:** The analysis identified key drivers of employee performance, helping the organization understand the factors contributing to high performance and areas needing improvement. Insights such as the impact of experience on performance, departmental variations, and the salary-performance relationship provide a foundation for better HR strategies, including targeted training, promotions, and retention efforts. The project contributes to optimizing talent management, aligning employee performance with organizational goals, and improving overall workforce efficiency.
 ### ECommerce-Sales-Analysis
