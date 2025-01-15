@@ -20,6 +20,15 @@ This repository was created to showcase my analytical and technical skills (Exce
 * [Contacts](#contacts)
 ## Portfolio Projects
 This section contains a list of projects with brief descriptions.
+### Time-Forecasting-&-Statistical-Modeling
+**Description:** This project involved the application of various forecasting and statistical modeling techniques to predict future values based on historical data. The objectives varied from predicting airline passenger numbers and Covid-19 cases to analyzing customer behavior and segmenting markets for targeted strategies. The techniques applied ranged from traditional time series methods to advanced machine learning models like neural networks, providing valuable insights for business and public health planning.<br>
+**Code:**<a href = "[IBM SPSS/Time Forecasting](https://github.com/Deepikamurali07/Main/tree/main/IBM%20SPSS)">
+  <code>IBM SPSS/Time Forecasting</code></a><br>
+**Presentation:** <a href = "">
+  <code>PDF static version</code></a> <a href = "">
+  <code>PowerPoint PPTX dynamic version</code></a><br>
+**Skills:** Time Series Analysis, ARIMA Modeling, Neural Networks (ANN), Logistic Regression, Cluster Analysis, Conjoint Analysis, Data Preprocessing, Data Imputation, Binary Classification, Hierarchical Clustering, Utility Value Calculation.<br>
+**Results:** The project successfully forecasted key metrics and provided valuable insights for business and public health applications. The airline passenger numbers for 1960 were accurately predicted, aiding in capacity planning. Short-term Covid-19 case predictions using ARIMA models supported public health decision-making. Exchange rate forecasts using neural networks helped in financial planning. Logistic regression analysis provided actionable insights into customer spending behavior, enabling targeted marketing strategies at Fresco Supermarket. Cluster analysis identified customer segments for personalized financial offerings, while conjoint analysis provided consumer insights that guided the development of a new mobile phone.
 ### Exploratory-Data-Analysis-UK-Vaccination-Trends
 **Description:** This project involves the analysis of the UK Vaccination dataset, focusing on trends, patterns, and insights related to vaccination progress across various regions. The goal is to understand how vaccination rates vary over time, identify key influencing factors, and present the results through meaningful visualizations.<br>
 **Code:**<a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/UK%20Vaccination%20Data%20Analysis/Report.ipynb">
