@@ -20,18 +20,17 @@ This repository was created to showcase my analytical and technical skills (Exce
 * [Contacts](#contacts)
 ## Portfolio Projects
 This section contains a list of projects with brief descriptions.
-### ECommerce-Sales-Analysis
-**Description:** The main goal of this project is to analyze a dataset scraped from  containing data in 46405 rows about cars on sale in Germany with production years from 2011 to 2021 using different Python libraries. Find out some interesting information and insights, visualize them, and present them using MS PowerPoint.<br>
-**Code:**<a href = "">
-  <code>german-cars-data-analysis.ipynb</code></a><br>
+### Exploratory-Data-Analysis-UK-Vaccination-Trends
+**Description:** This project involves the analysis of the UK Vaccination dataset, focusing on trends, patterns, and insights related to vaccination progress across various regions. The goal is to understand how vaccination rates vary over time, identify key influencing factors, and present the results through meaningful visualizations.<br>
+**Code:**<a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/UK%20Vaccination%20Data%20Analysis/Report.ipynb">
+  <code>Report.ipynb</code></a><br>
 **Presentation:** <a href = "">
   <code>PDF static version</code></a> <a href = "">
   <code>PowerPoint PPTX dynamic version</code></a><br>
-**Original dataset:** <a href = "">
-  <code>german-cars-dataset.csv</code></a><br>
-**Skills:** analytical thinking, data cleaning, data analysis, data vizualization, presentations<br>
-**Hard skills:** MS PowerPoint, Python: Pandas, NumPy, Mathplotlib, Seaborn. <br>
-**Results:** An analysis of a dataset containing information about cars posted on AutoScaut 24 was conducted. Some insights were found, visualized, and included in the presentation.
+**Original dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/UK%20Vaccination%20Data%20Analysis/UK_VaccinationsData.xlsx">
+  <code>UK_VaccinationsData.xlsx</code></a><br>
+**Skills:** Data Analysis, Python (Pandas, Matplotlib), Data Cleaning, Data Transformation, Data Visualization, Trend Analysis, Data Preprocessing, Statistical Analysis, Data Insights.<br>
+**Results:** An analysis of a dataset containing information about vaccinations was conducted. Some insights were found, visualized, and included in the presentation.
 ### Scheduling-Strategies-for-Enhanced-Efficiency-in-Complex-Manufacturing-Systems
 **Description:** The goal of this project is to use Excel functionality to analyze data about Adidas's product sales in the United States, which contain information in 9652 rows and 14 columns for the fiscal years 2020 and 2021. Visualize data, prepare different types of reports and interactive dashboard. <br>
 **Reports and conclusions:** <a href = "">
@@ -59,12 +58,6 @@ This section contains a list of projects with brief descriptions.
   <code>python-data-analysis</code></a> <br> 
 **Description:** This repository contains ipynb files with tasks that were completed during the Python Data Analysis course on LinkedIn Learning. The main goal is to improve Python's analytical abilities. <br>
 **Skills:** Python, Pandas, NumPy, Matplotlib, Data Analysis, Data Visualization <br>
-**Status:** Completed in 2022
-### Exploratory-Data-Analysis-UK-Vaccination-Trends
-**Repository:** <a href = "">
-  <code>excel-data-analysis</code></a> <br>
-**Description:** This repository contains xlsx files with completed tasks from the Excel Data Analysis course on LinkedIn Learning. The main goal is to advance knowledge in spreadsheets and statistical analysis. <br>
-**Skills:** Excel, Formulas, Functions, Data Analysis, Statistical Analysis. <br>
 **Status:** Completed in 2022
 ### Second-Hand-Car-Market-Case-Study-Analysis-Report
 **Repository:** <a href = "">
