@@ -40,7 +40,8 @@ This section contains a list of projects with brief descriptions.
 ### Scheduling-Strategies-for-Enhanced-Efficiency-in-Complex-Manufacturing-Systems
 **Description:** This research aimed at developing a flexible scheduling algorithm in Python to optimize the allocation and scheduling of components across multiple products in manufacturing environments. The algorithm addresses key challenges such as managing in-house and outsourced components, coordinating machine resources, and ensuring adherence to tight delivery schedules. The solution enhances operational efficiency by prioritizing product delivery deadlines, minimizing machine setup times, and offering real-time production monitoring.<br>
 **Code:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/ADDDELETE_1_Excel.py">
-  <code>Dashboard File Code</code></a> <a href = "*https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/Allocation_check_Excel.py**">
+  <code>Dashboard File Code</code></a> 
+  <a href = "*https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/Allocation_check_Excel.py**"> 
   <code>Scheduling Algo code</code></a><br>
 **Dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/Product%20Details_v2.xlsx">
   <code>Sample Product details</code></a><br>
@@ -60,9 +61,6 @@ This section contains a list of projects with brief descriptions.
 **Description:** This project involves the analysis of the UK Vaccination dataset, focusing on trends, patterns, and insights related to vaccination progress across various regions. The goal is to understand how vaccination rates vary over time, identify key influencing factors, and present the results through meaningful visualizations.<br>
 **Code:**<a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/UK%20Vaccination%20Data%20Analysis/Report.ipynb">
   <code>Report.ipynb</code></a><br>
-**Presentation:** <a href = "">
-  <code>PDF static version</code></a> <a href = "">
-  <code>PowerPoint PPTX dynamic version</code></a><br>
 **Original dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/UK%20Vaccination%20Data%20Analysis/UK_VaccinationsData.xlsx">
   <code>UK_VaccinationsData.xlsx</code></a><br>
 **Skills:** Data Analysis, Python (Pandas, Matplotlib), Data Cleaning, Data Transformation, Data Visualization, Trend Analysis, Data Preprocessing, Statistical Analysis, Data Insights.<br>
@@ -77,9 +75,9 @@ This section contains a list of projects with brief descriptions.
 **Results:** The analysis provided valuable insights into the pricing dynamics of second-hand BMW 3 Series cars, highlighting key price determinants and offering strategies to enhance predictive accuracy. The project delivered actionable insights that can help buyers, sellers, and market analysts better understand pricing trends in the second-hand car market. 
 ## Certificates
 * [Data Analyst Associate](https://github.com/Deepikamurali07/Main/blob/main/Certifications/Data%20Analyst%20Associate.pdf) - DataCamp 2024
-* [Agile Foundations]() - LinkedIn 2024
-* [Scrum Basics]() - LinkedIn, 2024
-* 
+* [Agile Foundations](https://github.com/Deepikamurali07/Main/blob/main/Certifications/Agile%20Foundations.pdf) - LinkedIn 2024
+* [Scrum Basics](https://github.com/Deepikamurali07/Main/blob/main/Certifications/Scrum%20Basics.pdf) - LinkedIn, 2024
+* [Automation Anywhere Master Developer](https://github.com/Deepikamurali07/Main/blob/main/Certifications/AA%20Master%20certificate.pdf)
 ## Contact
 * Email: deepikamurali127@gmail.com
 * LinkedIn: www.linkedin.com/in/deepika-murali120703
