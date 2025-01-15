@@ -40,8 +40,7 @@ This section contains a list of projects with brief descriptions.
 ### Scheduling-Strategies-for-Enhanced-Efficiency-in-Complex-Manufacturing-Systems
 **Description:** This research aimed at developing a flexible scheduling algorithm in Python to optimize the allocation and scheduling of components across multiple products in manufacturing environments. The algorithm addresses key challenges such as managing in-house and outsourced components, coordinating machine resources, and ensuring adherence to tight delivery schedules. The solution enhances operational efficiency by prioritizing product delivery deadlines, minimizing machine setup times, and offering real-time production monitoring.<br>
 **Code:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/ADDDELETE_1_Excel.py">
-  <code>Dashboard File Code</code></a> 
-  <a href = "*https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/Allocation_check_Excel.py"> 
+  <code>Dashboard File Code</code></a> <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/Allocation_check_Excel.py"> 
   <code>Scheduling Algo code</code></a><br>
 **Dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Scheduling%20Strategies%20for%20Enhanced%20Efficiency%20in%20Complex%20Manufacturing%20Systems/Product%20Details_v2.xlsx">
   <code>Sample Product details</code></a><br>
