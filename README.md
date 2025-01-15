@@ -38,7 +38,6 @@ This section contains a list of projects with brief descriptions.
 **Original dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Second%20Hand%20Car%20Analysis/cleaned_data_new.xlsx">
   <code>cleaned-new-data.xlsx</code></a><br>
 **Skills:** Data Collection & Cleaning, Statistical Analysis, Python, IBM SPSS Statistics, Data Visualization, Market Research, Reporting & Analysis, Problem-Solving & Critical Thinking.<br>
-**Hard skills:** Excel, Pivot Tables, Formulas, Functions, Charts, Dashboards, Slices, Pivot Charts.<br>
 **Results:** The analysis provided valuable insights into the pricing dynamics of second-hand BMW 3 Series cars, highlighting key price determinants and offering strategies to enhance predictive accuracy. The project delivered actionable insights that can help buyers, sellers, and market analysts better understand pricing trends in the second-hand car market. 
 ### Predictive-Analysis-for-Insurance-Risk-Assessment
 **Description:** The main goals of this project are: <br> 1) To clean the dataset from Kaggle about real estate in the United States using SQL, <br>2) Explore data in Bigquery, <br> 3) Group and prepare data for visualization in Power BI, <br> 4) Create comprehensive dashboards, including interactive property stats, the price calculator that can count average prices by given parameters, and a dashboard that shows the quantity of sold properties in different states and the sales distribution among the months in the year for effective data exploration. <br>
