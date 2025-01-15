@@ -31,17 +31,15 @@ This section contains a list of projects with brief descriptions.
   <code>UK_VaccinationsData.xlsx</code></a><br>
 **Skills:** Data Analysis, Python (Pandas, Matplotlib), Data Cleaning, Data Transformation, Data Visualization, Trend Analysis, Data Preprocessing, Statistical Analysis, Data Insights.<br>
 **Results:** An analysis of a dataset containing information about vaccinations was conducted. Some insights were found, visualized, and included in the presentation.
-### Scheduling-Strategies-for-Enhanced-Efficiency-in-Complex-Manufacturing-Systems
-**Description:** The goal of this project is to use Excel functionality to analyze data about Adidas's product sales in the United States, which contain information in 9652 rows and 14 columns for the fiscal years 2020 and 2021. Visualize data, prepare different types of reports and interactive dashboard. <br>
-**Reports and conclusions:** <a href = "">
-  <code>adidas-sales-data-analysis.xlsx</code></a> <br>
-**Dashboard:** <a href = "">
-  <code>adidas-sales-dashboard.xlsx</code></a> <br>
-**Original dataset:** <a href = "">
-  <code>adidas-us-sales.xlsx</code></a><br>
-**Skills:** analytical thinking, data cleaning, data analysis, data vizualization.<br>
+### Second-Hand-Car-Market-Case-Study-Analysis-Report
+**Description:** This project involved conducting an in-depth analysis of the second-hand car market in the UK, specifically focusing on BMW 3 Series cars in the BR2 0AA postal area. The objective was to identify key factors influencing the price of second-hand cars, with an emphasis on mileage and year of registration, using statistical modeling to forecast price trends.<br>
+**Reports and conclusions:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Second%20Hand%20Car%20Analysis/Data_mining_v0.2.ipynb">
+  <code>Data Analyis.ipynb</code></a> <br>
+**Original dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Python/Second%20Hand%20Car%20Analysis/cleaned_data_new.xlsx">
+  <code>cleaned-new-data.xlsx</code></a><br>
+**Skills:** Data Collection & Cleaning, Statistical Analysis, Python, IBM SPSS Statistics, Data Visualization, Market Research, Reporting & Analysis, Problem-Solving & Critical Thinking.<br>
 **Hard skills:** Excel, Pivot Tables, Formulas, Functions, Charts, Dashboards, Slices, Pivot Charts.<br>
-**Results:** An analysis of financial data on the sale of Adidas products in the USA for 2020 and 2021 was performed. Reports and dashboard were created. 
+**Results:** The analysis provided valuable insights into the pricing dynamics of second-hand BMW 3 Series cars, highlighting key price determinants and offering strategies to enhance predictive accuracy. The project delivered actionable insights that can help buyers, sellers, and market analysts better understand pricing trends in the second-hand car market. 
 ### Predictive-Analysis-for-Insurance-Risk-Assessment
 **Description:** The main goals of this project are: <br> 1) To clean the dataset from Kaggle about real estate in the United States using SQL, <br>2) Explore data in Bigquery, <br> 3) Group and prepare data for visualization in Power BI, <br> 4) Create comprehensive dashboards, including interactive property stats, the price calculator that can count average prices by given parameters, and a dashboard that shows the quantity of sold properties in different states and the sales distribution among the months in the year for effective data exploration. <br>
 **Data cleaning and exploring SQL:**<a href = "">
