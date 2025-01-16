@@ -1,12 +1,10 @@
 # Deepika Murali
 ## About me
-I am a results-driven Business Analyst with 4+ years of experience, specializing in data analysis, process optimization, and delivering actionable insights to drive business growth. With a strong background in gathering business requirements, defining user stories, and developing business cases, I excel at collaborating with cross-functional teams to develop data-driven solutions that meet business objectives.<br>
+Results-driven Business Analyst with over 4 years of experience specializing in data analysis, business process optimization, and stakeholder management. My expertise lies in gathering business requirements, solution designing, and process workflow design using BPMN to improve operational efficiency and drive business success. I am skilled in using SQL, Python, Power BI, and Excel to transform complex data into actionable insights that inform decision-making and enhance organizational performance.<br>
 
-Skilled in utilizing a wide range of analytical tools including SQL, Python, Power BI, and Excel, I am passionate about transforming complex data into clear, actionable insights. I have successfully worked on projects across multiple industries, improving operational efficiency, streamlining processes, and enhancing decision-making strategies.<br>
+With a strong foundation in Agile methodologies, I have successfully led User Acceptance Testing (UAT) and collaborated with cross-functional teams to deliver solutions that meet business needs. I have hands-on experience in process automation with tools like Power Automate, Automation Anywhere, and UiPath, which have helped streamline operations and reduce costs.<br>
 
-I am well-versed in Agile methodologies and have a proven track record in User Acceptance Testing (UAT), ensuring that solutions meet business needs and deliver measurable results. In addition, my experience with automation tools like Power Automate and UiPath has allowed me to drive efficiencies and reduce operational costs.<br>
-
-As I continue to grow in my career, I am eager to apply my skills in both business and data analysis to help organizations optimize their strategies, improve performance, and achieve their goals.<br>
+I am passionate about helping organizations optimize strategies, improve performance, and achieve measurable outcomes by blending business analysis with data-driven insights.<br>
 
 You can see more information in my [**CV**](https://github.com/Deepikamurali07/Main/blob/main/CV_Deepika%20Murali.pdf).
 
