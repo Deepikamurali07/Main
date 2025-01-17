@@ -29,6 +29,8 @@ This section contains a list of projects with brief descriptions.
   <code>Employee SQL Query File</code></a><br>
 **Dataset** <a href = "https://github.com/Deepikamurali07/Main/blob/main/SQL/Employee%20Data%20Analysis/Employe_Performance_dataset.csv">
  <code>Employe_Performance_dataset.csv</code></a><br>
+**PowerBI Dashboard** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Power%20BI/Employee%20Dashboard/Employee%20Dashboard.pbix">
+ <code>Employee Dashboard.pbix</code></a><br>
 **Skills:** Data Cleaning, Data Analysis, SQL, Data Transformation, Performance Analysis, Employee Segmentation, Correlation Analysis, HR Analytics, Data Visualization, Strategic Decision Making.<br>
 **Results:** The analysis identified key drivers of employee performance, helping the organization understand the factors contributing to high performance and areas needing improvement. Insights such as the impact of experience on performance, departmental variations, and the salary-performance relationship provide a foundation for better HR strategies, including targeted training, promotions, and retention efforts. The project contributes to optimizing talent management, aligning employee performance with organizational goals, and improving overall workforce efficiency.
 ### ECommerce-Sales-Analysis
@@ -37,6 +39,9 @@ This section contains a list of projects with brief descriptions.
   <code>ECommerce Analysis SQL Queries</code></a><br>
 **Dataset:** <a href = "https://github.com/Deepikamurali07/Main/blob/main/SQL/E-Commerce%20Sales%20Analysis/ecommerce_dataset_updated.csv">
   <code>ECommerce_Analysis.csv</code></a><br>
+**PowerBI Dashboard** <a href = "https://github.com/Deepikamurali07/Main/blob/main/Power%20BI/E-Commerce%20Sales%20Analysis/E-Commerce%20Sales%20Analysis.pbix">
+ <code>Sales Dashboard.pbix</code></a> <a href = "https://github.com/Deepikamurali07/Main/blob/main/Power%20BI/E-Commerce%20Sales%20Analysis/SuperStore_Sales_Dataset.csv">
+  <code>Sales_dataset.csv</code></a><br>
 **Skills:** SQL, Data Cleaning, Data Analysis, Customer Segmentation, Sales Trend Analysis, Discount Strategy Optimization, Data Visualization, E-commerce Analytics, Marketing Strategy Development, Inventory Optimization.<br>
 **Results:** This project analyzed e-commerce sales data to identify trends, optimize discounts, and improve customer engagement. It revealed seasonal peaks for categories like Toys and Books, steady demand for Home & Kitchen, and the importance of balancing discounts for revenue growth. Customer segmentation led to targeted marketing strategies, while insights into payment preferences highlighted the value of digital payments and Cash on Delivery for high-value purchases.
 ### Scheduling-Strategies-for-Enhanced-Efficiency-in-Complex-Manufacturing-Systems
