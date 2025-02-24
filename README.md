@@ -6,7 +6,7 @@ With a strong foundation in Agile methodologies, I have successfully led User Ac
 
 I am passionate about helping organizations optimize strategies, improve performance, and achieve measurable outcomes by blending business analysis with data-driven insights.<br>
 
-You can see more information in my [**CV**](https://github.com/Deepikamurali07/Main/blob/main/CV_Deepika%20Murali.pdf).
+You can see more information in my [**CV**](https://github.com/Deepikamurali07/Main/blob/main/Murali%20Deepika_CV.pdf).
 
 This repository was created to showcase my analytical and technical skills (Excel, Python, SQL, Power BI, PowerPoint, and others).
 ## Contents
