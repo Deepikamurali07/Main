@@ -1,0 +1,1109 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="36">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="893" y="54" width="675" height="1274" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data Analysis</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Data Analysis</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1303" y="284" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Contract Type" action="GroupBy" rename="Contract Type" />
+                <SummarizeField field="Churn Label" action="GroupBy" rename="Churn Label" />
+                <SummarizeField field="Total Charges" action="Avg" rename="Avg_Total Charges" />
+                <SummarizeField field="Customer ID" action="CountDistinct" rename="CountDistinct_Customer ID" />
+                <SummarizeField field="Monthly Charge" action="Avg" rename="Avg_Monthly Charge" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1051" y="452" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Churn Label" action="Count" rename="Churn_Yes_Count" />
+                <SummarizeField field="Contract Type" action="GroupBy" rename="Contract Type" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="967" y="500" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Churn</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2025-04-08 15:20:34</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2025-04-08 15:20:34</StartDate>
+                  <EndDate>2025-04-08 15:20:34</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Churn] = "1"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1051" y="573" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Churn Label" action="Count" rename="Churn_No_Count" />
+                <SummarizeField field="Contract Type" action="GroupBy" rename="Contract Type" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1135" y="513" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Contract Type" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Contract Type" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Contract Type" selected="True" rename="Right_Contract Type" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1243" y="513" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="([Churn_Yes_Count]/([Churn_Yes_Count]+[Churn_No_Count]))*100" field="Churn_Rate" size="19.2" type="FixedDecimal" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Churn_Rate = ([Churn_Yes_Count]/([Churn_Yes_Count]+[Churn_No_Count]))*100
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1039" y="693" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Total Charges] &lt; 100 THEN &quot;Low&quot; &#xA;ELSEIF [Total Charges] &lt; 500 THEN &quot;Medium&quot;                  ELSE &quot;High&quot; ENDIF&#xA;" field="Spending_Segment" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Spending_Segment = IF [Total Charges] &lt; 100 THEN "Low" 
+ELSEIF [Total Charges] &lt;...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1231" y="705" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Spending_Segment" action="GroupBy" rename="Spending_Segment" />
+                <SummarizeField field="Customer ID" action="Count" rename="Number Of Customers" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1171" y="369" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Monthly Charge] * [Account Length (in months)]" field="Total_CLV" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Total_CLV = [Monthly Charge] * [Account Length (in months)]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1291" y="741" width="148" height="60" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Segmenting customers based on their spending</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1159" y="189" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Local Calls] / [Account Length (in months)]&#xA;" field="Engagement_Score" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Engagement_Score = [Local Calls] / [Account Length (in months)]
+
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="24">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1075" y="849" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Churn Label" action="Count" rename="Churn_Yes_Count" />
+                <SummarizeField field="Senior_Flag" action="GroupBy" rename="Senior_Flag_C" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="25">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="979" y="908" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Churn</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2025-04-08 15:20:34</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>1</Operand>
+                  <StartDate>2025-04-08 15:20:34</StartDate>
+                  <EndDate>2025-04-08 15:20:34</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Churn] = 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="26">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1086" y="981" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Churn Label" action="Count" rename="Churn_No_Count" />
+                <SummarizeField field="Senior_Flag" action="GroupBy" rename="Senior_Flag_NC" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="27">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1182" y="921" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Senior_Flag_C" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Senior_Flag_NC" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Senior_Flag" selected="True" rename="Right_Senior_Flag" input="Right_" />
+                    <SelectField field="Right_Contract Type" selected="True" rename="Right_Contract Type" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="28">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1267" y="921" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="([Churn_Yes_Count]/([Churn_Yes_Count]+[Churn_No_Count]))*100" field="Churn_Rate_Seniority" size="19.2" type="FixedDecimal" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Churn_Rate_Seniority = ([Churn_Yes_Count]/([Churn_Yes_Count]+[Churn_No_Count]))*...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="29">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="918" y="1137" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Account Length (in months)] &gt; 20 THEN &quot;Long-Term&quot; ELSE &quot;Short-Term&quot; ENDIF&#xA;" field="Customer_Type" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Customer_Type = IF [Account Length (in months)] &gt; 20 THEN "Long-Term" ELSE "Shor...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="30">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1123" y="1101" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer_Type" action="GroupBy" rename="Customer_Type" />
+                <SummarizeField field="Churn Label" action="Count" rename="Count_L" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="31">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="1123" y="1197" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="Customer_Type" action="GroupBy" rename="Customer_Type" />
+                <SummarizeField field="Churn Label" action="Count" rename="Count_S" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="32">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="1015" y="1137" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>Customer_Type</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2025-04-08 16:19:34</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Long-Term</Operand>
+                  <StartDate>2025-04-08 16:19:34</StartDate>
+                  <EndDate>2025-04-08 16:19:34</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Customer_Type] = "Long-Term"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="33">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="1231" y="1149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="Customer_Type" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="Customer_Type" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_Customer_Type" selected="True" rename="Right_Customer_Type" input="Right_" />
+                    <SelectField field="Right_Count" selected="True" rename="Right_Count" input="Right_" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="34">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1327" y="1149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="([Count_L]/([Count_L]+[Count_S]))*100" field="Chrun_Rate_CT" size="2" type="Int16" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Chrun_Rate_CT = ([Count_L]/([Count_L]+[Count_S]))*100
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="35">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1423" y="1149" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="1-[Chrun_Rate_CT]" field="Retention_Rate" size="2" type="Int16" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[Retention_Rate = 1-[Chrun_Rate_CT]
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="37">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1327" y="909" width="108" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Churn Rate based on Seniority</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="38">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1423" y="164" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="0">C:\Users\deepi\OneDrive\Alteryx\Customer_Chrun\CustomerChurnData.csv</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <LineEndStyle>CRLF</LineEndStyle>
+                <Delimeter>,</Delimeter>
+                <ForceQuotes>False</ForceQuotes>
+                <HeaderRow>True</HeaderRow>
+                <CodePage>28591</CodePage>
+                <WriteBOM>True</WriteBOM>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>CustomerChurnData.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="39">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1279" y="381" width="156" height="96" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Calculating Customer Lifetime Value (CLV) gives insights into the total revenue each customer generates over their tenure</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="40">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1315" y="513" width="100" height="40" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text><![CDATA[Churn rates by Contract Type ]]></Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="41">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1399" y="1089" width="144" height="60" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Churn Rate and retention rate by Customer Type</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="42">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="1375" y="103" width="132" height="64" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>The Preprocessed data which is as input for POWER BI for visualising</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="54" y="59" width="648" height="288" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Data Preprocessing &amp; Cleaning</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Data Preprocessing &amp; Cleaning</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="103" y="155" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Databel - Data.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer ID" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Churn Label" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Account Length (in months)" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Local Calls" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Local Mins" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Intl Calls" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Intl Mins" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Intl Active" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Intl Plan" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Extra International Charges" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Customer Service Calls" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Avg Monthly GB Download" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Unlimited Data Plan" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Extra Data Charges" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="State" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Phone Number" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Gender" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Age" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Under 30" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Senior" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Group" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Number of Customers in Group" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Device Protection &amp; Online Backup" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Contract Type" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Payment Method" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Monthly Charge" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Total Charges" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Churn Category" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+                <Field name="Churn Reason" size="254" source="File: C:\Users\deepi\Downloads\case-study-analyzing-customer-churn\Datasets\Databel - Data.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings>
+            <Position x="211" y="156" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Value name="Check Box (135)">False</Value>
+              <Value name="Check Box (136)">False</Value>
+              <Value name="List Box (11)">"Customer ID","Churn Label","Account Length (in months)","Local Calls","Local Mins","Intl Calls","Intl Mins","Intl Active","Intl Plan","Extra International Charges","Customer Service Calls","Avg Monthly GB Download","Unlimited Data Plan","Extra Data Charges","State","Phone Number","Gender","Age","Under 30","Senior","Group","Number of Customers in Group","Device Protection &amp; Online Backup","Contract Type","Payment Method","Monthly Charge","Total Charges","Churn Category","Churn Reason"</Value>
+              <Value name="Check Box (84)">True</Value>
+              <Value name="Check Box (117)">True</Value>
+              <Value name="Check Box (15)">True</Value>
+              <Value name="Check Box (109)">False</Value>
+              <Value name="Check Box (122)">False</Value>
+              <Value name="Check Box (53)">False</Value>
+              <Value name="Check Box (58)">False</Value>
+              <Value name="Check Box (70)">False</Value>
+              <Value name="Check Box (77)">False</Value>
+              <Value name="Drop Down (81)">upper</Value>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings Macro="Cleanse.yxmc" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="295" y="156" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Account Length (in months)" selected="True" type="Int16" size="2" />
+                <SelectField field="Extra International Charges" selected="True" type="Double" size="8" />
+                <SelectField field="Extra Data Charges" selected="True" type="Double" size="8" />
+                <SelectField field="Monthly Charge" selected="True" type="Double" size="8" />
+                <SelectField field="Total Charges" selected="True" type="Double" size="8" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="391" y="156" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="IF [Churn Label] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="Churn" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Senior] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="Senior_Flag" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Group] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="Group_Flag" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Intl Active] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="Intl_Active_Flag" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Intl Plan] = &quot;yes&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="Intl_Plan_Flag" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Device Protection &amp; Online Backup] = &quot;Yes&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="Device_Protection_Flag" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Contract Type] = &quot;Month-to-Month&quot; THEN 1 ELSE 0 ENDIF" field="Contract_Month_to_Month" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Contract Type] = &quot;One Year&quot; THEN 1 ELSE 0 ENDIF" field="Contract_One_Year" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Contract Type] = &quot;Two Year&quot; THEN 1 ELSE 0 ENDIF" field="Contract_Two_Yeat" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Payment Method] = &quot;Direct Debit&quot; THEN 1 ELSE 0 ENDIF" field="Payment_Direct_Debit" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="IF [Payment Method] = &quot;Paper Check&quot; THEN 1 ELSE 0 ENDIF" field="Payment_Paper_Check" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Churn = IF [Churn Label] = "Yes" THEN 1 ELSE 0 ENDIF
+
+Senior_Flag = IF [Senior] ...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="487" y="156" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Local Calls" selected="True" type="Int16" size="2" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="571" y="156" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="[Local Mins] + [Intl Mins]&#xA;" field="Total_Call_Minutes" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[Local Calls] / [Account Length (in months)]&#xA;" field="Engagement_Score" size="1073741823" type="V_WString" enabled="true" />
+                <FormulaField expression="[Monthly Charge] / [Account Length (in months)]&#xA;" field="Avg_Monthly_Spend" size="1073741823" type="V_WString" enabled="true" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Total_Call_Minutes = [Local Mins] + [Intl Mins]
+
+Engagement_Score = [Local Calls...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="79" y="252" width="100" height="24" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Input Data</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="44">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="547" y="108" width="120" height="47" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Adding features to enhance the dataset</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="45">
+          <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+            <Position x="199" y="108" width="156" height="48" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Text>Handle Missing Data and Data Cleansing, Correct Data Types, Filter Relevant Data</Text>
+              <Font name="Arial" size="9.75" style="0" />
+              <TextColor name="Black" />
+              <FillColor name="Silver" />
+              <Shape shape="0" />
+              <Justification Justification="4" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="17" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="True" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="False" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Join" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="27" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="True" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="25" Connection="False" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Join" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="33" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="31" Connection="Output" />
+      <Destination ToolID="33" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="True" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="False" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Join" />
+      <Destination ToolID="34" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output26" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="29" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="38" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Initial_Stage</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="ca6f2c87-b0fc-41cf-9b30-896b222e06fc" />
+      <Telemetry>
+        <PreviousWorkflowId value="2cd4d6d2-114d-4e4a-82f4-634fe796bb59" />
+        <OriginWorkflowId value="2cd4d6d2-114d-4e4a-82f4-634fe796bb59" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
