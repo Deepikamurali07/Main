@@ -1,6 +1,6 @@
 # Deepika Murali
 ## About me
-Results-driven Business Analyst with over 4 years of experience specializing in data analysis, business process optimization, and stakeholder management. My expertise lies in gathering business requirements, solution designing, and process workflow design using BPMN to improve operational efficiency and drive business success. I am skilled in using SQL, Python, Power BI, and Excel to transform complex data into actionable insights that inform decision-making and enhance organizational performance.<br>
+Automation Engineer with over 4 years of experience specializing in RPA development(Automation Anywhere, UiPath), data analysis, business process optimization, and stakeholder management. My expertise lies in gathering business requirements, solution designing, and process workflow design using BPMN to improve operational efficiency and drive business success. I am skilled in using SQL, Python, Power BI, and Excel to transform complex data into actionable insights that inform decision-making and enhance organizational performance.<br>
 
 With a strong foundation in Agile methodologies, I have successfully led User Acceptance Testing (UAT) and collaborated with cross-functional teams to deliver solutions that meet business needs. I have hands-on experience in process automation with tools like Power Automate, Automation Anywhere, and UiPath, which have helped streamline operations and reduce costs.<br>
 
